@@ -89,15 +89,15 @@ def weighted_hash_adj_mat(data: numpy.ndarray, iterations: int, prune_cutoff: in
 
 The efficiency-minded among you may have a concern here. Namely that this needs \\(O(n^2)\\) space and time. And you'd be right. It definitely defeats the purpose of a super efficient algorithm, but we're exploring ideas and generalizations here so we're not concerned with that right now. Let's see what this spits out on some fake data:
 
-![Unweighted Graph](/assets/img/g1.png)
+![Unweighted Graph](/assets/img/graph1.png)
 
 The similarity connections seem pretty reasonable to me. Let's see what happens if we weight the lines by the weight in the matrix and play with the number of hashes.
 
-![Weighted Graph 1](/assets/img/g2.png)
+![Weighted Graph 1](/assets/img/graph2.png)
 
 Here we have unweighted on top and weghted on the bottom. If you look really hard you can see some points that are very close have much thicker lines. I also made the hashes smaller so that more points get clustered into each group
 
-![Weighted Graph 2](/assets/img/g3.png)
+![Weighted Graph 2](/assets/img/graph3.png)
 
 Here is another but with different numbers of iterations. You can play with all the parameters to get the effect you want. Once we have this graph, there's a rich repository of techniques we can use to analyze this farther, depending on what we're looking for. 
 
